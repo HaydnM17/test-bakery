@@ -1,0 +1,77 @@
+:root {
+  --bg: #fbf6ee;
+  --ink: #2b211a;
+  --muted: #6b5a4d;
+  --accent: #a0522d;
+  --card: #ffffff;
+  --line: #e7dccd;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 17px/1.6 Georgia, "Times New Roman", serif;
+}
+
+.test-note {
+  margin: 0;
+  padding: 8px 16px;
+  background: var(--ink);
+  color: var(--bg);
+  font: 14px/1.4 system-ui, sans-serif;
+  text-align: center;
+}
+
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 24px;
+  padding: 16px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.brand { color: var(--ink); font-size: 22px; font-weight: bold; text-decoration: none; }
+.nav { display: flex; gap: 16px; }
+.nav a { color: var(--muted); text-decoration: none; padding: 10px 0; }
+.nav a:hover { color: var(--accent); }
+
+main { max-width: 960px; margin: 0 auto; padding: 0 16px 48px; }
+section { padding: 40px 0; border-top: 1px solid var(--line); }
+.hero { border-top: 0; padding: 48px 0 56px; }
+h1 { font-size: clamp(32px, 7vw, 56px); line-height: 1.1; margin: 0 0 16px; max-width: 14ch; }
+h2 { font-size: 28px; margin: 0 0 20px; }
+h3 { font-size: 19px; margin: 0 0 4px; }
+p { margin: 0 0 12px; color: var(--muted); }
+
+.btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 12px 22px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 999px;
+  text-decoration: none;
+  font: 600 16px/1.2 system-ui, sans-serif;
+}
+.btn:hover { background: #8a4626; }
+
+.menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.menu-list li { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 18px; }
+
+.hours { list-style: none; margin: 16px 0 0; padding: 0; max-width: 420px; }
+.hours li { display: flex; justify-content: space-between; gap: 16px; padding: 8px 0; border-bottom: 1px solid var(--line); }
+
+.foot { text-align: center; padding: 24px 16px; border-top: 1px solid var(--line); }
+.foot p { font: 14px/1.4 system-ui, sans-serif; margin: 0; }
